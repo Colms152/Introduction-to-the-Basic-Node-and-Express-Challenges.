@@ -43,7 +43,7 @@ console.log("test that this is printing");
 if (process.env.MESSAGE_STYLE === "uppercase") {  
   response = "Hello json".toUpperCase();
 } else {
-  response = "Hello json";
+  response = "HELLO JSON";
 }
 
 app.get("/json", function(req, res) {
