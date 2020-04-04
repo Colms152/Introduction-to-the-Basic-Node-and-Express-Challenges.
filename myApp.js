@@ -39,7 +39,7 @@ app.use(express.static(__dirname + "/public"));
 
 /** 6) Use the .env file to configure the app */
 var response
-console.log(process.env);
+console.log("test that this is printing");
 if (process.env.MESSAGE_STYLE === "uppercase") {  
   response = "Hello json".toUpperCase();
 } else {
