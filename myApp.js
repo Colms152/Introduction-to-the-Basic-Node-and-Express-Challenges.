@@ -23,7 +23,7 @@ function one(req, res) {
 /** 3) Serve an HTML file */
 
 app.get("/", function(req, res) {
-    res.sendFile( "/public/index.html");
+    res.sendFile(__dirname + "/public/index.html");
   });
 
 /** 4) Serve static assets  */
