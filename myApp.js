@@ -21,9 +21,10 @@ function one(req, res) {
   
 */
 /** 3) Serve an HTML file */
-absolutePath = __dirname + /views/index.html
-app.get( '/' , res.sendFile(absolutePath));
 
+app.get("/", function(req, res) {
+    res.sendFile(__dirname + "/public/index.html");
+  });
 
 /** 4) Serve static assets  */
 
