@@ -104,6 +104,13 @@ app.get("/name", function(req, res) {
 
 
 /** 12) Get data form POST  */
+app.post("/name",function(req, res){
+var fName = req.body.first;
+var lName = req.body.last;
+
+res.json({"name": fName + " " + lName});
+
+});
 
 
 
