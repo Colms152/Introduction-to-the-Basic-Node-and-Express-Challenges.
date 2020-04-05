@@ -60,7 +60,11 @@ if (process.env.MESSAGE_STYLE === "uppercase") {
 app.get("/json", function(req, res) {
   res.json({"message": response});
 });
- 
+
+
+app.get("_api/use-env-vars", function(req, res) {
+  res.json({"passed":false});
+});
 /** 7) Root-level Middleware - A logger */
 //  place it before all the routes !
 
