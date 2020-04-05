@@ -31,21 +31,35 @@ app.use(express.static(__dirname + "/public"));
 
 
 /** 5) serve JSON on a specific route */
-app.get("/json", function(req, res) {
-    res.json({"message": response});
+/* app.get("/json", function(req, res) {
+    res.json({"message": "Hello json"});
   });
 
-
+*/
 
 /** 6) Use the .env file to configure the app */
-const response = ()=>{
-  let resp = " "
-if (process.env.MESSAGE_STYLE === 'uppercase'){
- return resp = "Hello json".toUpperCase();
-}else{
-  return resp = "Hello json";
+var response
+console.log("test that this is printing");
+console.log(process.env);
+
+if (process.env.MESSAGE_STYLE === "uppercase") {
+  response = "Hello World".toUpperCase();
+} else {
+  response = "Hello World";
 }
+
+
+/*
+if (process.env.MESSAGE_STYLE === "uppercase") {  
+  response = "HELLO JSON".toUpperCase();
+} else {
+  response = "Hello json";
 }
+*/
+
+app.get("/json", function(req, res) {
+  res.json({"message": response});
+});
 
 
 
