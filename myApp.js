@@ -62,9 +62,7 @@ app.get("/json", function(req, res) {
 });
 
 
-app.get("_api/use-env-vars", function(req, res) {
-  res.json({"passed":true});
-});
+
 /** 7) Root-level Middleware - A logger */
 //  place it before all the routes !
 
